@@ -4,10 +4,12 @@
  */
 
 #include <ros/ros.h>
-#include <std_srvs/SetBool.h>
+#include "basic_lecture/motor_data.h"
+#include "basic_lecture/move_motor.h"
 
-int main()
+int main(int argc, char** argv)
 {
+  ros::init(argc, argv, "example_node");
   
   return 0;
 }

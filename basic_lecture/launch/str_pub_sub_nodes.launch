@@ -1,0 +1,7 @@
+<launch>
+  <node name="string_pub" pkg="basic_lecture" type="str_publisher_node" output="screen"/>
+  <node name="string_sub" pkg="basic_lecture" type="str_subscriber_node" output="screen"/>
+
+  <param name="/foo_param" type="str" value="FOO!!!!"/>
+
+</launch>
