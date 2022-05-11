@@ -10,6 +10,7 @@ add_compile_options(-std=c++11)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  std_srvs
   message_generation
 )
 
@@ -132,6 +133,11 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(str_publisher_node src/str_publisher_node.cpp)
+add_executable(str_subscriber_node src/str_subscriber_node.cpp)
+add_executable(two_services_server_node src/two_services_server_node.cpp)
+add_executable(service_client_node src/service_client_node.cpp)
+add_executable(read_and_set_parameter_node src/read_and_set_parameter_node.cpp)
+add_executable(example_node src/example_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -142,9 +148,29 @@ add_executable(str_publisher_node src/str_publisher_node.cpp)
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 add_dependencies(str_publisher_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(str_subscriber_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(two_services_server_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(service_client_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(read_and_set_parameter_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(example_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(str_publisher_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(str_subscriber_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(two_services_server_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(service_client_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(read_and_set_parameter_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(read_and_set_parameter_node
   ${catkin_LIBRARIES}
 )
 
