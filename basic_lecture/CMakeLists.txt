@@ -170,7 +170,7 @@ target_link_libraries(service_client_node
 target_link_libraries(read_and_set_parameter_node
   ${catkin_LIBRARIES}
 )
-target_link_libraries(read_and_set_parameter_node
+target_link_libraries(example_node
   ${catkin_LIBRARIES}
 )
 
