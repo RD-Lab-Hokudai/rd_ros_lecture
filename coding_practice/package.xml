@@ -53,6 +53,7 @@
   <depend>rospy</depend>
   <depend>std_msgs</depend>
   <depend>geometry_msgs</depend>
+  <depend>visualization_msgs</depend>
   <depend>basic_lecture</depend>
   <build_depend>message_generation</build_depend> 
   <exec_depend>message_runtime</exec_depend> 
