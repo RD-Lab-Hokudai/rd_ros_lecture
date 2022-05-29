@@ -1,0 +1,13 @@
+# practice_func.srv
+
+## Requests
+
+string name
+geometry_msgs/Point point
+
+---
+
+## Responses
+
+bool result
+basic_lecture/motor_data data
