@@ -138,6 +138,7 @@ add_executable(two_services_server_node src/two_services_server_node.cpp)
 add_executable(service_client_node src/service_client_node.cpp)
 add_executable(read_and_set_parameter_node src/read_and_set_parameter_node.cpp)
 add_executable(example_node src/example_node.cpp)
+add_executable(name_sample_node src/name_sample_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -153,6 +154,7 @@ add_dependencies(two_services_server_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${
 add_dependencies(service_client_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(read_and_set_parameter_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 add_dependencies(example_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(name_sample_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(str_publisher_node
@@ -173,6 +175,10 @@ target_link_libraries(read_and_set_parameter_node
 target_link_libraries(example_node
   ${catkin_LIBRARIES}
 )
+target_link_libraries(name_sample_node
+  ${catkin_LIBRARIES}
+)
+
 
 #############
 ## Install ##
