@@ -1,0 +1,16 @@
+<launch>
+  <node name="name_sample" pkg="basic_lecture" type="name_sample_node"
+        output="screen"
+        />
+  <node name="$(anon name_sample)" pkg="basic_lecture" type="name_sample_node"
+        output="screen"
+        ns="foo"/>
+  <node name="$(anon name_sample-1)" pkg="basic_lecture" type="name_sample_node"
+        output="screen"
+        ns="foo"/>
+  <node name="$(anon name_sample-2)" pkg="basic_lecture" type="name_sample_node"
+        output="screen"
+        ns="bar"/>
+
+  <node name="rqt_graph" pkg="rqt_graph" type="rqt_graph"/>
+</launch>
